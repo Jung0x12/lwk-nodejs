@@ -31,8 +31,8 @@ function initializeNetwork(): void {
     // 初始化 regtest 網絡
     network = lwk.Network.regtest(assetId);
 
-    const correctUrl = "http://127.0.0.1:3002/"; // Electrs URL
-    esplora = new lwk.EsploraClient(network, correctUrl, false);
+    const correctUrl = "http://127.0.0.1:3102/"; // Waterfalls URL
+    esplora = new lwk.EsploraClient(network, correctUrl, true);
     console.log(`網絡已初始化: ${network.toString()}`);
   } catch (error) {
     console.error("初始化網絡時出錯:", error);
